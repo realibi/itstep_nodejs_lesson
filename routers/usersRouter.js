@@ -31,6 +31,7 @@ carsRouter.post('/', (request, response) => {
     users.login = newLogin;
     users.password = newPasword;
 
+    console.log(users);
     response.status("user added");
 });
 
