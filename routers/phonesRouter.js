@@ -12,7 +12,7 @@ phonersRouter.post('/', (req, res) => {
     let {model, price} = req.body;
 
     let newPhone = {model,price}
-    file.addCar(newPhone)
+    phonesArray.push(newPhone)
 
     res.status(201).send("phone added");
 });
