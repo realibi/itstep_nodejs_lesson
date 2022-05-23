@@ -1,14 +1,14 @@
 const express = require("express");
-let phonersRouter = express.Router();
+let phonesRouter = express.Router();
 
 let phonesArray = []
 
-phonersRouter.get('/', (request, response) => {
+phonesRouter.get('/', (request, response) => {
     let array = phonesArray
     response.json(array)
 });
 
-phonersRouter.post('/', (req, res) => {
+phonesRouter.post('/', (req, res) => {
     let {model, price} = req.body;
 
     let newPhone = {model,price}
@@ -16,3 +16,5 @@ phonersRouter.post('/', (req, res) => {
 
     res.status(201).send("phone added");
 });
+
+module.exports = phonesRouter;

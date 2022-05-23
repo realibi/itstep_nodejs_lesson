@@ -46,7 +46,7 @@ coffeeRouter.get('/:name', (request, response) => {
     }
 });
 
-carsRouter.post('/', (req, res) => {
+coffeeRouter.post('/', (req, res) => {
     let {name, volume, price, takeAway, syrop} = req.body;
 
     let newCoffee = {name, volume, price, takeAway, syrop}
@@ -55,7 +55,7 @@ carsRouter.post('/', (req, res) => {
     res.status(201).send("coffee added");
 });
 
-carsRouter.delete('/', (req, res) => {
+coffeeRouter.delete('/', (req, res) => {
     let {name} = req.body;
 
     let nameIndex = coffeeArray.findIndex(item => item.name == name);
@@ -64,7 +64,7 @@ carsRouter.delete('/', (req, res) => {
     res.status(200).send("coffee deleted");
 });
 
-carsRouter.put('/', (req, res) => {
+coffeeRouter.put('/', (req, res) => {
     let {name, volume, price, takeAway, syrop} = req.body;
     
     carsArray[index].name = nameNew;
@@ -75,3 +75,6 @@ carsRouter.put('/', (req, res) => {
 
     res.status(200).send("coffee changed");
 });
+
+
+module.exports = coffeeRouter;
