@@ -9,9 +9,9 @@
 <body>
     {{#each laptopsarray}}
         <div style="display: flex;">
-            <p>{{manufacturer}}</p>
-            <p>{{name}}</p>
-            <p>{{price}}</p>
+            <p>{{this.manufacturer}}</p>
+            <p>{{this.name}}</p>
+            <p>{{this.price}}</p>
         </div>
     {{/each}}
 </body>
