@@ -32,7 +32,7 @@ let coffeeArray = [{
 
 
 coffeeRouter.get('/', (request, response) => {
-    response.json(coffeeArray);
+    response.render('coffees.hbs', {coffeeArray})
 });
 
 coffeeRouter.get('/:name', (request, response) => {
