@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee side</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div id="main_block">
+        {{#if showArray}}
         {{#each coffeeArray}}
         <p>Coffee name: <b>{{this.name}}</b></p>
         <p>Coffee volume: <b>{{this.volume}}</b></p>
@@ -23,6 +25,22 @@
         <p>Coffee syrop: <b>{{this.syrop}}</b></p>
         <br>
         {{/each}}
+
+        {{else}}
+        
+        <p>Coffee name: <b>{{coffee.name}}</b></p>
+        <p>Coffee volume: <b>{{coffee.volume}}</b></p>
+        <p>Coffee price: <b>{{coffee.price}} T</b></p>
+        <p>Coffee takeaway: <b> 
+                {{#if coffee.takeAway}}
+                    Yes
+                {{else}}
+                    No
+                {{/if}}
+            </b>
+        </p>
+        <p>Coffee syrop: <b>{{coffee.syrop}}</b></p>
+        {{/if}}
     </div>
 </body>
 </html>

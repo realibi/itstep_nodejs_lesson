@@ -10,6 +10,7 @@ const usersRouter = require("./routers/usersRouter")
 const coffeesRouter = require("./routers/coffeesRouter")
 app.use(cors());
 
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'hbs');
 
 app.use(bodyParser.json());

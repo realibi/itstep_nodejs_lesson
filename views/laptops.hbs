@@ -7,12 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    {{#each laptopsarray}}
+    {{#if showArray == true}}
+        {{#each laptopsarray}}
+            <div style="display: flex;">
+                <p>{{this.manufacturer}}</p>
+                <p>{{this.name}}</p>
+                <p>{{this.price}}</p>
+            </div>
+        {{/each}}
+    {{/if}}
+
+    {{#else}}
         <div style="display: flex;">
-            <p>{{this.manufacturer}}</p>
-            <p>{{this.name}}</p>
-            <p>{{this.price}}</p>
+            <p>{{manufacturer}}</p>
+            <p>{{name}}</p>
+            <p>{{price}}</p>
         </div>
-    {{/each}}
+    {{/else}}
 </body>
 </html>

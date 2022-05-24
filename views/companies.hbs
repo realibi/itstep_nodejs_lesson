@@ -10,8 +10,12 @@
     <h1>Companies page</h1>
     
     {{#each company}}
-        <h2>Company name: {{this.name}}</h2>
-        <h2>Year: {{this.year}}</h2>
+        <h3>Company name: {{this.name}}</h3>
+        <h3>Year: {{this.year}}</h3>
+        <br>
     {{/each}}
+
+    <h3>Company name: {{findCompanyId.name}}</h3>
+    <h3>Year: {{findCompanyId.year}}</h3>
 </body>
 </html>
