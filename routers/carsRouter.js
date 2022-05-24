@@ -12,10 +12,10 @@ let array = [
     }
 ]
 
-carsRouter.get('/',(request, response)=>{
+// carsRouter.get('/',(request, response)=>{
     
-    response.send(array);
-});
+//     response.send(array);
+// });
 
 
 carsRouter.post('/',(request, response)=>{
@@ -32,5 +32,21 @@ carsRouter.post('/',(request, response)=>{
     console.log(model)
     response.status(200).send("car addeb")
 });
+
+
+carsRouter.get('/', (req, res) => {
+    res.render('cars.hbs', {
+        array
+    });
+});
+
+
+
+
+
+
+
+
+
 
 module.exports = carsRouter;

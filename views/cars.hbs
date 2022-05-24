@@ -7,20 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Contacts page</h1>
-    <h3>Email: {{email}}</h3>
-    {{#if showPhone}}
-        <h3>Phone: {{phone}}</h3>
-    {{/if}}
-    <h3>Address: {{userAddress}}</h3>
-    <br><br>
+    <h1>Cars catalog</h1>
 
-    <ol>
-    {{#each branches}}
-        <li>{{this.address}}: {{this.phone}}</li>
+    {{#each array}}
+        <li>{{this.model}}: {{this.price}}</li>
     {{/each}}
-    </ol>
-
-
 </body>
 </html>
