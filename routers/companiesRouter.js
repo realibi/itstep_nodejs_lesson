@@ -1,16 +1,17 @@
 let express = require("express");
 let companiesRouter = express.Router();
 
-let companiesArray = [
-    {name: 'Air Astana', year: 2001},
-    {name: 'Berkut Air', year: 2000},
-    {name: 'Euro-Asia Air', year: 1997},
-    {name: 'SCAT', year: 1997},
-    {name: 'Semeyavia', year: 1991}
-];
-
 companiesRouter.get('/', (request, response) => {
-    response.json(companiesArray);
+    response.render('companies.hbs', {
+        company: [
+            {name: 'Air Astana', year: 2001},
+            {name: 'Berkut Air', year: 2000},
+            {name: 'Euro-Asia Air', year: 1997},
+            {name: 'SCAT', year: 1997},
+            {name: 'Semeyavia', year: 1991}
+        ]
+    })
+    // response.json(companiesArray);
 });
 
 companiesRouter.post('/', (req, res) => {
