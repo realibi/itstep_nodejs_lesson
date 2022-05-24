@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contacts page</h1>
+    <h3>Email: {{email}}</h3>
+    {{#if showPhone}}
+        <h3>Phone: {{phone}}</h3>
+    {{/if}}
+    <h3>Address: {{userAddress}}</h3>
+    <br><br>
+
+    <ol>
+    {{#each branches}}
+        <li>{{this.address}}: {{this.phone}}</li>
+    {{/each}}
+    </ol>
+
+</body>
+</html>
