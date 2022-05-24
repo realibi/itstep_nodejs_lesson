@@ -7,10 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    {{#if id}}
+       
     <ul>
-        {{#each phones}}
-            <li>{{this.model}}: {{this.color}}: {{this.price}}</li>
-        {{/each}}
+            <li>Model: {{phonesId.model}} <br>
+            Color: {{phonesId.color}} <br>
+            Price: {{phonesId.price}} <br>
+            Id: {{phonesId.id}}</li>
     </ul>
+   
+    {{else}}
+     {{#each phones}}
+    <p>
+        Model: {{this.model}} <br>
+        Color: {{this.color}} <br>
+        Price: {{this.price}} <br> 
+        Id: {{this.id}}   
+    </p> 
+     {{/each}}
+    {{/if}}
 </body>
 </html>

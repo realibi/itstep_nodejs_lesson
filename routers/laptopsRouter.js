@@ -1,5 +1,4 @@
 const express = require("express");
-const hbs = require("hbs");
 let laptopsRouter = express.Router();
 
 let laptopsArray = [
@@ -23,9 +22,7 @@ let laptopsArray = [
 ];
 
 laptopsRouter.get("/", (request, response) => {
-    response.render("laptops.hbs", {
-        laptopsarray: laptopsArray
-    });
+    response.send(laptopsArray);
 });
 
 laptopsRouter.post("/", (request, response) => {
