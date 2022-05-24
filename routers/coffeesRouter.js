@@ -32,7 +32,7 @@ let coffeeArray = [{
 
 
 coffeeRouter.get('/', (request, response) => {
-    response.json(carsArray);
+    response.json(coffeeArray);
 });
 
 coffeeRouter.get('/:name', (request, response) => {

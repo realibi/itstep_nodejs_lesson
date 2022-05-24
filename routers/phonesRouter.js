@@ -1,7 +1,7 @@
 const express = require("express");
 let phonesRouter = express.Router();
 
-let phonesArray = []
+let phonesArray = [];
 
 phonesRouter.get('/', (request, response) => {
     let array = phonesArray
