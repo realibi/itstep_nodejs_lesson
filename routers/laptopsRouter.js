@@ -2,8 +2,6 @@ const express = require("express");
 const hbs = require("hbs");
 let laptopsRouter = express.Router();
 
-laptopsRouter.set("view engine", "hbs");
-
 let laptopsArray = [
     {
         manufacturer: "Acer",
