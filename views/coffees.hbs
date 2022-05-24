@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee side</title>
+</head>
+<body>
+    <div id="main_block">
+        {{#each coffeeArray}}
+        <p>Coffee name: <b>{{this.name}}</b></p>
+        <p>Coffee volume: <b>{{this.volume}}</b></p>
+        <p>Coffee price: <b>{{this.price}}</b></p>
+        {{#if this.takeaway}}
+        yes
+        {{/if}}
+        <p>Coffee takeaway: <b>{{this.takeaway}}</b></p>
+        <p>Coffee syrop: <b>{{this.syrop}}</b></p>
+        <br>
+        {{/each}}
+    </div>
+</body>
+</html>
