@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/cars", carsRouter);
-// app.use("/phones", phonesRouter);
-// app.use("/laptops", laptopsRouter);
-// app.use("/companies", companiesRouter);
-// app.use("/users", usersRouter);
-// app.use("/coffees", coffeesRouter);
+app.use("/phones", phonesRouter);
+app.use("/laptops", laptopsRouter);
+app.use("/companies", companiesRouter);
+app.use("/users", usersRouter);
+app.use("/coffees", coffeesRouter);
 
 app.listen(8080);
