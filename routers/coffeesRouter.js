@@ -6,44 +6,50 @@ let coffeeArray = [{
     volume: 0.33,
     price: 1100,
     takeAway: false,
-    syrop: "Caramel"
+    syrop: "Caramel", 
+    id: 1
 },
 {
     name: "Americano",
     volume: 0.33,
     price: 800,
     takeAway: true,
-    syrop: "none"
+    syrop: "none", 
+    id: 2
 },
 {
     name: "Capucino",
     volume: 0.45,
     price: 1100,
     takeAway: true,
-    syrop: "Chocolate"
+    syrop: "Chocolate", 
+    id: 3
 },
 {
     name: "Espresso",
     volume: 0.25,
     price: 700,
     takeAway: false,
-    syrop: "none"
+    syrop: "none", 
+    id: 4
 }];
 
 
 coffeeRouter.get('/', (request, response) => {
-    response.render('coffees.hbs', {coffeeArray})
+    response.render('coffees.hbs', {coffeeArray, showArray: true});
 });
 
-coffeeRouter.get('/:name', (request, response) => {
-    let coffeName = request.params.name;
-    let foundCoffeeIndex = coffeeArray.findIndex(item => item.name == coffeName);
+coffeeRouter.get('/:id', (request, response) => {
+    let coffeeId = request.params.id;
+    let foundCoffeeIndex = coffeeArray.findIndex(item => item.id == coffeeId);
 
     if(foundCoffeeIndex != -1){
-        response.send(coffeeArray[foundCoffeeIndex]);
+        response.render('coffees.hbs', {coffee: coffeeArray[foundCoffeeIndex], showArray: false});
     }else{
         response.status(404).send("Not found");
-    }
+    };
+
+    
 });
 
 coffeeRouter.post('/', (req, res) => {
