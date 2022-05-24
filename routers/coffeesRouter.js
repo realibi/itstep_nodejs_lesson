@@ -6,7 +6,7 @@ let coffeeArray = [{
     volume: 0.33,
     price: 1100,
     takeAway: false,
-    syrop: "caramel"
+    syrop: "Caramel"
 },
 {
     name: "Americano",
@@ -20,7 +20,7 @@ let coffeeArray = [{
     volume: 0.45,
     price: 1100,
     takeAway: true,
-    syrop: "chocolate"
+    syrop: "Chocolate"
 },
 {
     name: "Espresso",

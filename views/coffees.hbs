@@ -11,11 +11,15 @@
         {{#each coffeeArray}}
         <p>Coffee name: <b>{{this.name}}</b></p>
         <p>Coffee volume: <b>{{this.volume}}</b></p>
-        <p>Coffee price: <b>{{this.price}}</b></p>
-        {{#if this.takeaway}}
-        yes
-        {{/if}}
-        <p>Coffee takeaway: <b>{{this.takeaway}}</b></p>
+        <p>Coffee price: <b>{{this.price}} T</b></p>
+        <p>Coffee takeaway: <b> 
+                {{#if this.takeAway}}
+                    Yes
+                {{else}}
+                    No
+                {{/if}}
+            </b>
+        </p>
         <p>Coffee syrop: <b>{{this.syrop}}</b></p>
         <br>
         {{/each}}
