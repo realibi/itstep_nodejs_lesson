@@ -48,8 +48,6 @@ coffeeRouter.get('/:id', (request, response) => {
     }else{
         response.status(404).send("Not found");
     };
-
-    
 });
 
 coffeeRouter.post('/', (req, res) => {
@@ -62,10 +60,10 @@ coffeeRouter.post('/', (req, res) => {
 });
 
 coffeeRouter.delete('/', (req, res) => {
-    let {name} = req.body;
+    let {id} = req.body;
 
-    let nameIndex = coffeeArray.findIndex(item => item.name == name);
-    coffeeArray.splice(nameIndex, 1);
+    let index = coffeeArray.findIndex(item => item.id == id);
+    coffeeArray.splice(index, 1);
 
     res.status(200).send("coffee deleted");
 });
