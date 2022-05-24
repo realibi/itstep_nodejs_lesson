@@ -25,9 +25,7 @@ let laptopsArray = [
 ];
 
 laptopsRouter.get("/", (request, response) => {
-<<<<<<< HEAD
-    response.send(laptopsArray);
-=======
+
     response.render("laptops.hbs", {
         laptopsarray: laptopsArray,
         showArray: true
@@ -45,7 +43,7 @@ laptopsRouter.get("/:id", (request, response) => {
         price: laptopsArray[foundIndex].price,
         showArray: false
     });
->>>>>>> 282c6231e73de439e29784d0fca94a2ba8ac14c5
+
 });
 
 laptopsRouter.post("/", (request, response) => {
