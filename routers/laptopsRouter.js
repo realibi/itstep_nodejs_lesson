@@ -1,5 +1,8 @@
 const express = require("express");
+const hbs = require("hbs");
 let laptopsRouter = express.Router();
+
+laptopsRouter.set("view engine", "hbs");
 
 let laptopsArray = [
     {
@@ -22,7 +25,9 @@ let laptopsArray = [
 ];
 
 laptopsRouter.get("/", (request, response) => {
-    response.send(laptopsArray);
+    response.render("laptops.hbs", {
+        laptopsarray: laptopsArray
+    });
 });
 
 laptopsRouter.post("/", (request, response) => {
